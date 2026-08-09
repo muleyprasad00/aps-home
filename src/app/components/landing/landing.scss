@@ -1,0 +1,26 @@
+.app-container {
+    height: 82vh;
+}
+
+.app-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}
+
+.open-app {
+    display: inline-block;
+    margin-top: 5px;
+    color: #1976d2;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.open-app:hover {
+    text-decoration: underline;
+}

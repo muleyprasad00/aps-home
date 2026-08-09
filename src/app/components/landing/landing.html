@@ -1,5 +1,28 @@
 <aps-header applicationName="Task Manager" productLabel="APS Workspace" />
 
-<p>landing works!</p>
+
+<div class="app-container">
+    <h1>My Apps</h1>
+    @if(apps().length){
+    <div class="app-grid">
+        @for (app of apps(); track app?.id) {
+        <div class="app-card">
+            <div class="app-icon">
+                {{ app.name.charAt(0).toUpperCase() }}
+            </div>
+
+            <div class="app-info">
+                <h3>{{ app.name }}</h3>
+
+                <a (click)="openApp(app.url)" class="open-app">
+                    Open App →
+                </a>
+            </div>
+        </div>
+        }
+    </div>
+    }
+</div>
+
 
 <aps-footer />

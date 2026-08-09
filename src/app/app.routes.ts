@@ -14,8 +14,7 @@ export const routes: Routes = [
             import('./components/landing/landing').then(m => m.Landing)
     },
     {
-        path: '',
-        redirectTo: 'login',
-        pathMatch: 'full'
+        path: '**',
+        redirectTo: 'landing',
     }
 ];
