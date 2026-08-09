@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production --base-href /aps-home/",
+    "deploy:prod": "npm run build:prod && angular-cli-ghpages --dir=dist/aps-home/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -31,7 +33,7 @@
     "@angular/router": "^21.1.0",
     "@apollo/client": "^4.2.10",
     "apollo-angular": "^14.1.0",
-    "aps-common-ui": "^0.0.5",
+    "aps-common-ui": "^0.0.6",
     "graphql": "^16.14.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -42,6 +44,7 @@
     "@angular/compiler-cli": "^21.1.0",
     "jsdom": "^27.1.0",
     "typescript": "~5.9.2",
-    "vitest": "^4.0.8"
+    "vitest": "^4.0.8",
+    "angular-cli-ghpages": "^3.1.0"
   }
 }
