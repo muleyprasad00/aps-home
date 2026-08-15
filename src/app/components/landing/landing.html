@@ -2,11 +2,11 @@
 
 
 <div class="app-container">
-    <h1>My Apps</h1>
+    <h1 class="title">My Applications</h1>
     @if(apps().length){
     <div class="app-grid">
         @for (app of apps(); track app?.id) {
-        <div class="app-card">
+        <div class="app-card" (click)="openApp(app.url)">
             <div class="app-icon">
                 {{ app.name.charAt(0).toUpperCase() }}
             </div>
@@ -14,8 +14,8 @@
             <div class="app-info">
                 <h3>{{ app.name }}</h3>
 
-                <a (click)="openApp(app.url)" class="open-app">
-                    Open App →
+                <a class="open-app">
+                    Open App &rarr;
                 </a>
             </div>
         </div>
